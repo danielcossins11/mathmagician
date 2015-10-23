@@ -41,7 +41,7 @@ namespace Mathmagician
             //primes = new int[amount];
             bool result = true;
             int count = 0;
-            for(int i=1; i<100; i++)
+            for(int i=1; ; i++)
             {
                 result = true;
                 for(int j=2; j<i; j++)
