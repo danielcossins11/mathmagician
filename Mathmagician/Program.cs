@@ -8,16 +8,15 @@ namespace Mathmagician
 {
     class Program
     {
-        static void Main(string[] args)
+        public static int getValidInput()
         {
-            Console.WriteLine("What would you like for me to do?");
             int inputInt;
             while (true)
             {
                 string input = Console.ReadLine();
                 if (int.TryParse(input, out inputInt))
                 {
-                    if(inputInt == 1 || inputInt == 2 || inputInt == 3)
+                    if (inputInt == 1 || inputInt == 2 || inputInt == 3)
                     {
                         break;
                     }
@@ -31,13 +30,19 @@ namespace Mathmagician
                     Console.WriteLine("Invalid input");
                 }
             }
+            return inputInt;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("What would you like for me to do?");
+            int input = getValidInput();
 
 
 
 
 
 
-            switch (inputInt)
+            switch (input)
             {
                 case 1:
                     Console.WriteLine("Case 1");
