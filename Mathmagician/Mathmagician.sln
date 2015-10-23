@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mathmagician", "Mathmagician.csproj", "{D3740DA2-D773-4AF6-874E-BFC63687D086}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathmagicianTests", "..\MathmagicianTests\MathmagicianTests.csproj", "{76AAF7C2-2B69-4EB9-B78D-858A71619B16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D3740DA2-D773-4AF6-874E-BFC63687D086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3740DA2-D773-4AF6-874E-BFC63687D086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3740DA2-D773-4AF6-874E-BFC63687D086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76AAF7C2-2B69-4EB9-B78D-858A71619B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76AAF7C2-2B69-4EB9-B78D-858A71619B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76AAF7C2-2B69-4EB9-B78D-858A71619B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76AAF7C2-2B69-4EB9-B78D-858A71619B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
