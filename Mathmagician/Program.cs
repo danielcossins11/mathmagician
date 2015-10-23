@@ -25,6 +25,52 @@ namespace Mathmagician
             }
             return inputInt;
         }
+
+        public static void calcIntegers(int amount)
+        {
+            for(int i=0; i< amount; i++)
+            {
+                Console.WriteLine(i+1 + ", ");
+            }
+            return;
+        }
+
+        public static void calcPrimes(int amount)
+        {
+            int[] primes;
+            primes = new int[amount];
+            bool result = true;
+            int count = 0;
+            for(int i=1; i<100; i++)
+            {
+                result = true;
+                for(int j=2; j<i; j++)
+                {
+                    if(i%j == 0)
+                    {
+                        result = false;
+                        break;
+                    }
+                }
+                Console.WriteLine(result + " for " + i);
+                if(result == true)
+                {
+                    count++;
+                    Console.WriteLine(count);
+                }
+                if(count > amount)
+                {
+                    break;
+                }
+            }
+
+            //Print statement
+            for (int i = 0; i < amount; i++)
+            {
+                //Console.WriteLine(primes[i]);
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine(@"What would you like for me to do?
@@ -50,9 +96,11 @@ namespace Mathmagician
             {
                 case 1:
                     Console.WriteLine("Case 1");
+                    calcIntegers(num);
                     break;
                 case 2:
                     Console.WriteLine("Case 2");
+                    calcPrimes(num);
                     break;
                 case 3:
                     Console.WriteLine("Case 3");
