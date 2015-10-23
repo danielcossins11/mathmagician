@@ -37,8 +37,8 @@ namespace Mathmagician
 
         public static void calcPrimes(int amount)
         {
-            int[] primes;
-            primes = new int[amount];
+            //int[] primes;
+            //primes = new int[amount];
             bool result = true;
             int count = 0;
             for(int i=1; i<100; i++)
@@ -52,22 +52,16 @@ namespace Mathmagician
                         break;
                     }
                 }
-                Console.WriteLine(result + " for " + i);
+                //Console.WriteLine(result + " for " + i);
                 if(result == true)
                 {
                     count++;
-                    Console.WriteLine(count);
+                    Console.WriteLine(i);
                 }
-                if(count > amount)
+                if(count >= amount)
                 {
                     break;
                 }
-            }
-
-            //Print statement
-            for (int i = 0; i < amount; i++)
-            {
-                //Console.WriteLine(primes[i]);
             }
         }
 
