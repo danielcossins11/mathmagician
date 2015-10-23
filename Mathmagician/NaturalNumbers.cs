@@ -10,6 +10,7 @@ namespace Mathmagician
     public class NaturalNumbers
     {
         protected int first;
+        protected int increment = 1;
 
         public NaturalNumbers()
         {
@@ -18,7 +19,7 @@ namespace Mathmagician
 
         public virtual int GetNext(int x)
         {
-            return x + 1;
+            return x + increment;
         }
 
         public int GetFirst()

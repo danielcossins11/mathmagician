@@ -11,12 +11,7 @@ namespace Mathmagician
         public EvenNumbers()
         {
             first = 2;
-        }
-
-        public override int GetNext(int x)
-        {
-            //return x + 2;
-            return base.GetNext(x) + 1;
+            increment = 2;
         }
 
         public override int[] GetSequence(int length)
