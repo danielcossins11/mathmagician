@@ -30,7 +30,7 @@ namespace Mathmagician
         {
             for(int i=0; i< amount; i++)
             {
-                Console.WriteLine(i+1 + ", ");
+                Console.WriteLine(i+1);
             }
             return;
         }
@@ -83,7 +83,15 @@ namespace Mathmagician
 
         public static void calcEvens(int amount)
         {
-            for(int i=0; i< amount*2; i+=2)
+            for(int i=0; i<amount*2; i+=2)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        public static void calcOdds(int amount)
+        {
+            for(int i=1; i<amount*2; i += 2)
             {
                 Console.WriteLine(i);
             }
@@ -115,21 +123,27 @@ namespace Mathmagician
                 case 1:
                     Console.WriteLine("Case 1");
                     calcIntegers(num);
+                    Console.WriteLine(num + " integers");
                     break;
                 case 2:
                     Console.WriteLine("Case 2");
                     calcPrimes(num);
+                    Console.WriteLine(num + " prime numbers");
                     break;
                 case 3:
                     Console.WriteLine("Case 3");
                     calcFibbonacci(num);
+                    Console.WriteLine(num + " fibbonacci numbers");
                     break;
                 case 4:
                     Console.WriteLine("Case 4");
                     calcEvens(num);
+                    Console.WriteLine(num + " even numbers");
                     break;
                 case 5:
                     Console.WriteLine("Case 5");
+                    calcOdds(num);
+                    Console.WriteLine(num + " odd numbers");
                     break;
                 default:
                     Console.WriteLine("Default case");
