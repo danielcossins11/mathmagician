@@ -9,14 +9,14 @@ namespace Mathmagician
 {
     public class NaturalNumbers
     {
-        private int first;
+        protected int first;
 
         public NaturalNumbers()
         {
             first = 1;
         }
 
-        public int GetNext(int x)
+        public virtual int GetNext(int x)
         {
             return x + 1;
         }
@@ -31,7 +31,7 @@ namespace Mathmagician
             return GetSequence(10);
         }
 
-        public int[] GetSequence(int length)
+        public virtual int[] GetSequence(int length)
         {
             //int[] output = new int[length];
             List<int> output = new List<int>();
