@@ -1,4 +1,5 @@
 ﻿using System;
+using Mathmagician;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,151 +9,34 @@ namespace Mathmagician
 {
     class Program
     {
-        public static int getValidInput()
+        static void Main(string[] args)
         {
-            int inputInt;
-            while (true)
+            string prompt = "> ";
+            Console.WriteLine("What do you want me to do?");
+            Console.Write(prompt);
+            string response = Console.ReadLine();
+            if (response == "natural numbers")
             {
-                string input = Console.ReadLine();
-                if (int.TryParse(input, out inputInt))
+                Console.WriteLine("How many?");
+                Console.Write(prompt);
+                string response_length = Console.ReadLine();
+                int length;
+                bool parsed = int.TryParse(response_length, out length);
+                if (parsed)
                 {
-                    break;
+                    NaturalNumbers nats = new NaturalNumbers();
+                    Console.WriteLine(nats.ToString(nats.GetSequence(length)));
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input");
+                    Console.WriteLine("Whoops!");
                 }
             }
-            return inputInt;
-        }
-
-        public static void calcIntegers(int amount)
-        {
-            for(int i=0; i< amount; i++)
+            else
             {
-                Console.WriteLine(i+1);
+                Console.WriteLine("Nope! Do better next time.");
             }
-            return;
-        }
-
-        public static void calcPrimes(int amount)
-        {
-            //int[] primes;
-            //primes = new int[amount];
-            bool result = true;
-            int count = 0;
-            for(int i=1; ; i++)
-            {
-                result = true;
-                for(int j=2; j<i; j++)
-                {
-                    if(i%j == 0)
-                    {
-                        result = false;
-                        break;
-                    }
-                }
-                //Console.WriteLine(result + " for " + i);
-                if(result == true)
-                {
-                    count++;
-                    Console.WriteLine(i);
-                }
-                if(count >= amount)
-                {
-                    break;
-                }
-            }
-        }
-
-        public static void calcFibbonacci(int amount)
-        {
-            int prev1 = 1;
-            int prev2 = 0;
-            int current = 1;
-            Console.WriteLine(prev1);
-            Console.WriteLine(prev2);
-            for (int i = 1; i <= amount; i++)
-            {
-                current = prev1 + prev2;
-                Console.WriteLine(current);
-                prev2 = prev1;
-                prev1 = current;
-            }
-        }
-
-        public static void calcEvens(int amount)
-        {
-            for(int i=0; i<amount*2; i+=2)
-            {
-                Console.WriteLine(i);
-            }
-        }
-
-        public static void calcOdds(int amount)
-        {
-            for(int i=1; i<amount*2; i += 2)
-            {
-                Console.WriteLine(i);
-            }
-        }
-
-        static void Main(string[] args)
-        {
-            Console.WriteLine(@"What would you like for me to do?
-1. Integers
-2. Primes
-3. Fibonacci
-4. even
-5. odd");
-            int input = getValidInput();
-            while(input < 1 || input > 5)
-            {
-                Console.WriteLine("Invalid input");
-                input = getValidInput();
-            }
-
-            Console.WriteLine("how many should I print?");
-            int num = getValidInput();
-
-
-            
-
-            switch (input)
-            {
-                case 1:
-                    Console.WriteLine("Case 1");
-                    calcIntegers(num);
-                    Console.WriteLine(num + " integers");
-                    break;
-                case 2:
-                    Console.WriteLine("Case 2");
-                    calcPrimes(num);
-                    Console.WriteLine(num + " prime numbers");
-                    break;
-                case 3:
-                    Console.WriteLine("Case 3");
-                    calcFibbonacci(num);
-                    Console.WriteLine(num + " fibbonacci numbers");
-                    break;
-                case 4:
-                    Console.WriteLine("Case 4");
-                    calcEvens(num);
-                    Console.WriteLine(num + " even numbers");
-                    break;
-                case 5:
-                    Console.WriteLine("Case 5");
-                    calcOdds(num);
-                    Console.WriteLine(num + " odd numbers");
-                    break;
-                default:
-                    Console.WriteLine("Default case");
-                    break;
-            }
-
-
-
-            Console.WriteLine("Press any key to exit");
+            Console.WriteLine("Press any key to finish . . .");
             Console.ReadKey();
         }
     }
