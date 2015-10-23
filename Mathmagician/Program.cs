@@ -81,6 +81,14 @@ namespace Mathmagician
             }
         }
 
+        public static void calcEvens(int amount)
+        {
+            for(int i=0; i< amount*2; i+=2)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine(@"What would you like for me to do?
@@ -118,6 +126,7 @@ namespace Mathmagician
                     break;
                 case 4:
                     Console.WriteLine("Case 4");
+                    calcEvens(num);
                     break;
                 case 5:
                     Console.WriteLine("Case 5");
