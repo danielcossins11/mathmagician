@@ -65,6 +65,22 @@ namespace Mathmagician
             }
         }
 
+        public static void calcFibbonacci(int amount)
+        {
+            int prev1 = 1;
+            int prev2 = 0;
+            int current = 1;
+            Console.WriteLine(prev1);
+            Console.WriteLine(prev2);
+            for (int i = 1; i <= amount; i++)
+            {
+                current = prev1 + prev2;
+                Console.WriteLine(current);
+                prev2 = prev1;
+                prev1 = current;
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine(@"What would you like for me to do?
@@ -98,6 +114,7 @@ namespace Mathmagician
                     break;
                 case 3:
                     Console.WriteLine("Case 3");
+                    calcFibbonacci(num);
                     break;
                 case 4:
                     Console.WriteLine("Case 4");
