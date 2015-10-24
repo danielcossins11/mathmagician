@@ -8,7 +8,6 @@ namespace Mathmagician
 {
     public class FibonacciNumbers : NaturalNumbers
     {
-        private int prev;
         public FibonacciNumbers()
         {
             first = 1;
