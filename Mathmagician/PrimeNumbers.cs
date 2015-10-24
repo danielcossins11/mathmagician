@@ -13,27 +13,38 @@ namespace Mathmagician
             first = 2;
         }
 
+        public static bool CheckIfPrime(int num)
+        {
+            if (num == 1)
+                return false;
+            if (num == 2)
+                return true;
+
+            if (num % 2 == 0)
+                return false; //Even number     
+
+            for (int i = 3; i < num/2 + 1; i += 2)
+            {
+                if (num % i == 0)
+                    return false;
+            }
+            return true;
+        }
+
         public override int GetNext(int x)
         {
-            int nextPrime =0;
-            for(int i=x+2; i<1000; i++)
+            int nextNumber = x + 1;
+            while (true)
             {
-                if (i % 2 != 0)
+                if (CheckIfPrime(nextNumber))
                 {
-                    for(int j=2; j<=i/2 + 1; i++)
-                    {
-                        if (i%j == 0)
-                        {
-                            nextPrime = i;
-                        }
-                    }
+                    return nextNumber;
+                }
+                else
+                {
+                    nextNumber++;
                 }
             }
-            //for(int i=x; i<1000; i++)
-            //{
-            //    if(i.isPrime)
-            //}
-            return nextPrime;
         }
     }
 }
