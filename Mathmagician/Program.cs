@@ -12,10 +12,15 @@ namespace Mathmagician
         static void Main(string[] args)
         {
             string prompt = "> ";
-            Console.WriteLine("What do you want me to do?");
+            Console.WriteLine(@"What do you want me to do?
+Natural Numers
+Even Numbers
+Odd Numbers
+Fibonacci Numbers
+Prime Numbers");
             Console.Write(prompt);
             string response = Console.ReadLine();
-            if (response == "natural numbers")
+            if (response.ToLower() == "natural numbers")
             {
                 Console.WriteLine("How many?");
                 Console.Write(prompt);
