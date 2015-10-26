@@ -19,6 +19,8 @@ namespace Mathmagician
                 return false;
             if (num == 2)
                 return true;
+            if (num == 3)
+                return true;
 
             if (num % 2 == 0)
                 return false; //Even number     
@@ -42,7 +44,7 @@ namespace Mathmagician
                 }
                 else
                 {
-                    nextNumber++;
+                  nextNumber += 1;
                 }
             }
         }
