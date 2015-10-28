@@ -52,5 +52,34 @@ namespace MathmagicianTests
             string actual = primes.ToString(primes.GetSequence(length));
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void PrimeFindIndexOfElement()
+        {
+            PrimeNumbers prime = new PrimeNumbers();
+            int input = 73;
+            int expected = 20;
+            int actual = prime.FindIndex(input);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void PrimeGetNextNonPrime()
+        {
+            PrimeNumbers prime = new PrimeNumbers();
+            int input = 105;
+            prime.GetNext(input);
+        }
+
+        [TestMethod]
+        public void PrimeIsPrime()
+        {
+            PrimeNumbers prime = new PrimeNumbers();
+            int input = 73;
+            bool expected = true;
+            bool actual = prime.isPrime(input);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
